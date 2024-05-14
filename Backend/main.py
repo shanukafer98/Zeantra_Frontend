@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import OAuth2PasswordBearer
+from mangum import Mangum
 
 
 
@@ -15,6 +16,7 @@ from routes.AllDataRetrive import AllDataRetriveRoute
 from routes.Autorun import AutorunRoute
 from routes.Chatbot import ChatbotRoute
 app = FastAPI()
+handler = Mangum(app)
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
