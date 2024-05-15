@@ -35,24 +35,29 @@ app.include_router(AllDataRetriveRoute,tags=['View_all_Data'])
 app.include_router(AutorunRoute, tags=["Autorun"])
 app.include_router(ChatbotRoute, prefix="/Chatbot", tags=["Chatbot"])
 
-
 # React app is running on port 3000
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[("http://localhost:3000")],
-    allow_credentials=True,
-    allow_methods=["GET", "POST", "PUT", "DELETE"],
-    allow_headers=["*"],
-)
-# Vite app is running on port 5173
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=[
+        "http://localhost:3000",
+        "https://zeantradesktop-bcu5wnpd5-shanukafer98s-projects.vercel.app/"
+    ],
     allow_credentials=True,
     allow_methods=["GET", "POST", "PUT", "DELETE"],
     allow_headers=["*"],
 )
 
+# Vite app is running on port 5173
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5173",
+        "https://zeantradesktop-bcu5wnpd5-shanukafer98s-projects.vercel.app/"
+    ],
+    allow_credentials=True,
+    allow_methods=["GET", "POST", "PUT", "DELETE"],
+    allow_headers=["*"],
+)
 
 if __name__ == "__main__":
     import uvicorn
