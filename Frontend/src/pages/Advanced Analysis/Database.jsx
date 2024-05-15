@@ -14,7 +14,7 @@ function DataTable() {
     }, [startDate, endDate]);
 
     const fetchData = async () => {
-        const result = await axios.get(`http://localhost:8000/Database/items?start=${startDate.toISOString()}&end=${endDate.toISOString()}`);
+        const result = await axios.get(`/Database/items?start=${startDate.toISOString()}&end=${endDate.toISOString()}`);
         if (result.data) {
             setData(result.data);
         } else {
@@ -25,7 +25,7 @@ function DataTable() {
     const addItem = async () => {
         const newItem = prompt('Enter new item');
         if (newItem) {
-            await axios.post('http://localhost:8000/Database/items', { item: newItem });
+            await axios.post('/Database/items', { item: newItem });
             fetchData();
         }
     };

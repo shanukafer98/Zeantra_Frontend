@@ -1,10 +1,11 @@
 import React from "react";
 import DefaultLayout from "../layout/DefaultLayout";
 import Breadcrumb from "../components/Breadcrumbs/Breadcrumb";
-import DataTable from "./Data_Table";
+import toast from "react-hot-toast";
+
 
 export default function Contact() {
-    const [result, setResult] = React.useState("");
+ 
   
     const onSubmit = async (event) => {
       event.preventDefault();
@@ -21,11 +22,11 @@ export default function Contact() {
       const data = await response.json();
   
       if (data.success) {
-        setResult("Form Submitted Successfully");
+        toast.success("Form Submitted Successfully");
         event.target.reset();
       } else {
         console.log("Error", data);
-        setResult(data.message);
+        toast.error("Error Occured");
       }
     };
   
@@ -58,7 +59,7 @@ export default function Contact() {
           <button type="submit" className="w-full p-2 bg-blue-500 hover:bg-blue-900 text-white rounded text-lg">Submit Form</button>
   
         </form>
-        <span className="block mt-4 text-center text-2xl text-slate-200">{result}</span>
+       
      
         
   

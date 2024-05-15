@@ -1,18 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
 const Chatbot = () => {
   useEffect(() => {
     // Set chatbot configuration
-      window.embeddedChatbotConfig = {
+    window.embeddedChatbotConfig = {
       chatbotId: "VqlZDcsfQxYRqJS6lRxeA",
-      domain: "www.chatbase.co"
+      domain: "www.chatbase.co",
     };
 
     // Create script for chatbot
-    const chatbotScript = document.createElement('script');
+    const chatbotScript = document.createElement("script");
     chatbotScript.src = "https://www.chatbase.co/embed.min.js";
-    chatbotScript.setAttribute('chatbotId', 'VqlZDcsfQxYRqJS6lRxeA');
-    chatbotScript.setAttribute('domain', 'www.chatbase.co');
+    chatbotScript.setAttribute("chatbotId", "VqlZDcsfQxYRqJS6lRxeA");
+    chatbotScript.setAttribute("domain", "www.chatbase.co");
     chatbotScript.defer = true;
     document.body.appendChild(chatbotScript);
 

@@ -134,8 +134,8 @@ const Dashboard = () => {
       
       <div className='grid grid-cols-1 md:grid-cols-1 gap-6 mt-9 '>
       <div className = "bg-slate-200  dark:bg-slate-800 rounded-lg"><SalesProfitLineChart/></div>
-      <div className = "bg-slate-200  dark:bg-slate-800 rounded-lg"><SalesLineChart api = "http://127.0.0.1:8000/Sales/Sales_Frontend" yaxix = "sales" xaxix = "date"/></div>
-      <div className = "bg-slate-200  dark:bg-slate-800 rounded-lg"><SalesLineChart api = "http://127.0.0.1:8000/Sales/Profit_Frontend" yaxix = "profit" xaxix = "date"/></div>
+      <div className = "bg-slate-200  dark:bg-slate-800 rounded-lg"><SalesLineChart api = "/Sales/Sales_Frontend" yaxix = "sales" xaxix = "date"/></div>
+      <div className = "bg-slate-200  dark:bg-slate-800 rounded-lg"><SalesLineChart api = "/Sales/Profit_Frontend" yaxix = "profit" xaxix = "date"/></div>
       
       </div>
     

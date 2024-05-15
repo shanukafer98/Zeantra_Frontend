@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 
 const Signup = () => {
@@ -23,7 +24,7 @@ const Signup = () => {
         e.preventDefault();
 
         if (!validatePassword(password)) {
-            alert('Password must contain at least one lower case letter, one upper case letter, one digit, one special character, and be at least 8 characters long');
+            toast('Password must contain at least one lower case letter, one upper case letter, one digit, one special character, and be at least 8 characters long',{duration: 3000});
             return;
         }
 
@@ -39,13 +40,13 @@ const Signup = () => {
                         setPassword('');
                         setConfirmPassword('');
                         setPasswordsMatch(true);
-                        alert('User registered successfully!');
+                        toast.success('User registered successfully!');
                         navigate('/');
                     }
                 }).catch(err => {
                     if (err.response && err.response.status === 400) {
                         // Username already exists error
-                        alert(err.response.data.detail);
+                     toast.error(err.response.data.detail);
                     } else {
                         // Other errors
                         console.log(err);

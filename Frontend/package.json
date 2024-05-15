@@ -4,8 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "proxy": "https://financial-planning-e1jz.onrender.com",
-
-  
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -24,6 +22,7 @@
     "react-apexcharts": "^1.4.1",
     "react-datepicker": "^6.8.0",
     "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
     "react-leaflet": "^4.2.1",
     "react-router-dom": "^6.22.1",
     "react-simple-maps": "^3.0.0",

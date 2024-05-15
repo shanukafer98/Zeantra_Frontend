@@ -1,8 +1,6 @@
 
 import DefaultLayout from '../../layout/DefaultLayout';
-
 import Breadcrumb from '../../components/Breadcrumbs/Breadcrumb';
-
 import Top_20 from '../../components/Charts/Top20/top20';
 import DataTable from './Database';
 
@@ -20,10 +18,10 @@ const Top20 = () => {
 
      
 
-         <div className = "bg-slate-300  dark:bg-slate-800 rounded-lg"><Top_20 api = "http://127.0.0.1:8000/Top20s/product with the most sales" title = "Top 10 Products with most sales"  xaxix = 'product_name'/></div>
-         <div className = "bg-slate-300  dark:bg-slate-800 rounded-lg"><Top_20 api = "http://127.0.0.1:8000/Top20s/product with average sales" title = "Top 10 Products with average sales" xaxix = 'product_name' /></div>
-         <div className = "bg-slate-300  dark:bg-slate-800 rounded-lg"><Top_20 api = "http://127.0.0.1:8000/Top20s/countries with the most sales" title = "Top 10 Countries with most sales" xaxix = 'country' /></div>
-         <div className = "bg-slate-300  dark:bg-slate-800 rounded-lg"><Top_20 api = "http://127.0.0.1:8000/Top20s/countries with average sales" title = "Top 10 Countries with average sales" xaxix = 'country' /></div>
+         <div className = "bg-slate-300  dark:bg-slate-800 rounded-lg"><Top_20 api = "/Top20s/product with the most sales" title = "Top 10 Products with most sales"  xaxix = 'product_name'/></div>
+         <div className = "bg-slate-300  dark:bg-slate-800 rounded-lg"><Top_20 api = "/Top20s/product with average sales" title = "Top 10 Products with average sales" xaxix = 'product_name' /></div>
+         <div className = "bg-slate-300  dark:bg-slate-800 rounded-lg"><Top_20 api = "/Top20s/countries with the most sales" title = "Top 10 Countries with most sales" xaxix = 'country' /></div>
+         <div className = "bg-slate-300  dark:bg-slate-800 rounded-lg"><Top_20 api = "/Top20s/countries with average sales" title = "Top 10 Countries with average sales" xaxix = 'country' /></div>
       
            </div>
 

@@ -3,6 +3,7 @@ import Axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../components/Authentication';
+import toast from 'react-hot-toast';
 
 const Login = () => {
     const { setIsAuthenticated } = useAuth();
@@ -17,17 +18,17 @@ const Login = () => {
             .then(response => {
                 if (response.data.access_token) {
                     localStorage.setItem('token', response.data.access_token);
-                    alert('Login successful!');
+                    toast.success('Login successful!');
                     setIsAuthenticated(true); // Update isAuthenticated to true
                     navigate('/dashboard');
                 } else {
                     setLoginError(true);
-                    alert('Login Failed! Invalid Credentials!');
+                    toast.error('Login Failed! Invalid Credentials!');
 
                 }
             }).catch(err => {
               
-                alert('Login Failed! Invalid Credentials!');
+                toast.error('Login Failed! Invalid Credentials!');
 
             });
     };
