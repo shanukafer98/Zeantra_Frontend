@@ -12,7 +12,7 @@ const Dashboard = () => {
   const [totalProfit, setTotalProfit] = useState(0);
 
   useEffect(() => {
-  fetch('http://127.0.0.1:8000/Sales/Sales_Frontend') 
+  fetch('/Sales/Sales_Frontend') 
     .then(response => response.json())
     .then(data => {
         let totalSales = Object.values(data.sales).reduce((a, b) => a + b, 0);
@@ -24,7 +24,7 @@ const Dashboard = () => {
   },[]);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/Sales/Profit_Frontend') 
+    fetch('/Sales/Profit_Frontend') 
       .then(response => response.json())
       .then(data => {
           if (data.profit) {

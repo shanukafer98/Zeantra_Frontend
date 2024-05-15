@@ -110,7 +110,7 @@ class SalesPieChart extends React.Component {
     }
 
     componentDidMount() {
-        fetch('http://127.0.0.1:8000/ValueCounts/FullTimePeriod_Frontend')
+        fetch('/ValueCounts/FullTimePeriod_Frontend')
             .then(response => response.json())
             .then(data => {
                 this.setState({

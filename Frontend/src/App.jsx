@@ -36,7 +36,7 @@ function App() {
 
     <>
       <Routes>
-        {isAuthenticated ? (
+        {!isAuthenticated ? (
 
           <>
             <Route
