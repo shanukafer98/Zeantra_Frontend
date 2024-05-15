@@ -31,7 +31,7 @@ const Signup = () => {
             console.log(username, email, password);
             // Proceed with form submission
 
-            Axios.post('http://localhost:8000/UserRegistration', { username, email, password })
+            Axios.post('/UserRegistration', { username, email, password })
                 .then(response => {
                     if (response.data.message === 'User registered successfully') {
                         setUsername('');

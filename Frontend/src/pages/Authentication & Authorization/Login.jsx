@@ -13,7 +13,7 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        Axios.post('http://127.0.0.1:8000/UserValidation', { email, password })
+        Axios.post('/UserValidation', { email, password })
             .then(response => {
                 if (response.data.access_token) {
                     localStorage.setItem('token', response.data.access_token);
