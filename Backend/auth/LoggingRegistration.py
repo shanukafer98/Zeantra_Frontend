@@ -11,7 +11,11 @@ load_dotenv()  # Load environment variables from .env file
 
 SECRET_KEY = os.getenv("SECRET_KEY")
 ALGORITHM = os.getenv("ALGORITHM")
-ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES"))
+ACCESS_TOKEN_EXPIRE_MINUTES = os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES")
+if ACCESS_TOKEN_EXPIRE_MINUTES is None or not ACCESS_TOKEN_EXPIRE_MINUTES.isdigit():
+    ACCESS_TOKEN_EXPIRE_MINUTES = 60
+else:
+    ACCESS_TOKEN_EXPIRE_MINUTES = int(ACCESS_TOKEN_EXPIRE_MINUTES)
 
 from connection import collection2
 from fastapi import HTTPException, status
