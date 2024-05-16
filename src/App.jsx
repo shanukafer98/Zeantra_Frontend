@@ -24,6 +24,7 @@ function App() {
   return (
     <>
       <Routes>
+        //if authenticated
         {!isAuthenticated ? (
           <>
             <Route
