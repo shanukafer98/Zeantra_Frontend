@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "proxy": "http://16.170.215.156:8001",
+  "proxy": "https://zeantra-3.onrender.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
