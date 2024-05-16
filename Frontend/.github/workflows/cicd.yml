@@ -2,10 +2,11 @@ name: CICD
 
 on:
   push:
-   branches:
+    branches:
       - main
     paths:
-      - 'Frontend/**'
+      - 'frontend/**'
+      
 jobs:
   build:
     runs-on: ubuntu-latest
