@@ -40,7 +40,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
-        "https://zeantradesktop-bcu5wnpd5-shanukafer98s-projects.vercel.app/"
+        "https://zeantra-z2w3.vercel.app/"
     ],
     allow_credentials=True,
     allow_methods=["GET", "POST", "PUT", "DELETE"],
@@ -52,7 +52,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://zeantradesktop-bcu5wnpd5-shanukafer98s-projects.vercel.app/"
+        "https://zeantra-z2w3.vercel.app/"
     ],
     allow_credentials=True,
     allow_methods=["GET", "POST", "PUT", "DELETE"],

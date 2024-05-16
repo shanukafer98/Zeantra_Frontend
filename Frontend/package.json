@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "proxy": "https://financial-planning-e1jz.onrender.com",
+  "proxy": "16.170.215.156",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
