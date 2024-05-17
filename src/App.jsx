@@ -28,7 +28,7 @@ function App() {
         {!isAuthenticated ? (
           <>
             <Route
-              path={`${process.env.ENDPOINT}/dashboard`}
+              path="/"
               element={
                 <>
                   <PageTitle title="Dashboard | Financial Planning" />
@@ -95,7 +95,7 @@ function App() {
         ) : (
           // If the user is not authenticated, render the Login route
           <>
-            <Route path="/" element={<Login />} />
+            <Route path="/signin" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
           </>
         )}
