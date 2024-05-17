@@ -28,7 +28,7 @@ function App() {
         {!isAuthenticated ? (
           <>
             <Route
-              path="/dashboard"
+              path={`${process.env.ENDPOINT}/dashboard`}
               element={
                 <>
                   <PageTitle title="Dashboard | Financial Planning" />
