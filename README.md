@@ -33,3 +33,16 @@ First, make sure you have [Node.js](https://nodejs.org/) installed on your machi
 To start the development server, run:
 ```bash
 npm run dev
+
+## Features
+
+Responsive UI
+Dark Light theme Switcher
+
+## Technologies Used
+
+React JS
+Formik
+Tailwind CSS
+Apex chart
+Vite
