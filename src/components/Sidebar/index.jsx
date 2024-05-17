@@ -59,7 +59,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
     >
       {/* <!-- SIDEBAR HEADER --> */}
       <div className="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5">
-        <NavLink to="/dashboard">
+        <NavLink to="/">
           <div className="flex flex-row gap-2">
             <img src={Logo} alt="Logo" width="60px" height="60px" />
             <div className="font-bold my-2 text-[30px] p-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text">
@@ -112,7 +112,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                   return (
                     <React.Fragment>
                       <NavLink
-                        to="/dashboard"
+                        to="/"
                         className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
                           (pathname === "/" ||
                             pathname.includes("dashboard")) &&
