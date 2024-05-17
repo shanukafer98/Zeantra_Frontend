@@ -18,10 +18,10 @@ const Top20 = () => {
 
      
 
-         <div className = "bg-slate-300  dark:bg-slate-800 rounded-lg"><Top_20 api = "/Top20s/product with the most sales" title = "Top 10 Products with most sales"  xaxix = 'product_name'/></div>
-         <div className = "bg-slate-300  dark:bg-slate-800 rounded-lg"><Top_20 api = "/Top20s/product with average sales" title = "Top 10 Products with average sales" xaxix = 'product_name' /></div>
-         <div className = "bg-slate-300  dark:bg-slate-800 rounded-lg"><Top_20 api = "/Top20s/countries with the most sales" title = "Top 10 Countries with most sales" xaxix = 'country' /></div>
-         <div className = "bg-slate-300  dark:bg-slate-800 rounded-lg"><Top_20 api = "/Top20s/countries with average sales" title = "Top 10 Countries with average sales" xaxix = 'country' /></div>
+         <div className = "bg-slate-300  dark:bg-slate-800 rounded-lg"><Top_20 api = {`${process.env.ENDPOINT}/Top20s/product with the most sales`} title = "Top 10 Products with most sales"  xaxix = 'product_name'/></div>
+         <div className = "bg-slate-300  dark:bg-slate-800 rounded-lg"><Top_20 api = {`${process.env.ENDPOINT}/Top20s/product with average sales`} title = "Top 10 Products with average sales" xaxix = 'product_name' /></div>
+         <div className = "bg-slate-300  dark:bg-slate-800 rounded-lg"><Top_20 api = {`${process.env.ENDPOINT}/Top20s/countries with the most sales`} title = "Top 10 Countries with most sales" xaxix = 'country' /></div>
+         <div className = "bg-slate-300  dark:bg-slate-800 rounded-lg"><Top_20 api = {`${process.env.ENDPOINT}/Top20s/countries with average sales`} title = "Top 10 Countries with average sales" xaxix = 'country' /></div>
       
            </div>
 

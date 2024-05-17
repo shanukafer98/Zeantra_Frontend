@@ -22,7 +22,7 @@ const DataTable = () => {
   const fetchData = useCallback(async () => {
     setLoading(true);
     try {
-      const response = await axios.get("/DataRetrive");
+      const response = await axios.get(`${process.env.ENDPOINT}/DataRetrive`);
       if (response.data.length === 0) {
         setHasMore(false);
         return;
@@ -52,7 +52,7 @@ const DataTable = () => {
 
     try {
       const response = await axios.get(
-        `/search?order_id=${orderId}&product_id=${productId}`
+        `${process.env.ENDPOINT}/search?order_id=${orderId}&product_id=${productId}`
       );
       setData(response.data);
       setSearchResults(response.data.map((item) => item._id));
@@ -79,7 +79,7 @@ const DataTable = () => {
       setData(updatedData);
 
       const response = await axios.put(
-        `/update/${currentItem._id}`,
+        `${process.env.ENDPOINT}/update/${currentItem._id}`,
         currentItem
       );
 
@@ -103,7 +103,7 @@ const DataTable = () => {
   const deleteRows = async () => {
     for (const _id of searchResults) {
       try {
-        const response = await axios.delete(`/delete/${_id}`);
+        const response = await axios.delete(`${process.env.ENDPOINT}/delete/${_id}`);
 
         if (response.data.message === "Row deleted successfully") {
           // Remove the deleted row from the data state variable

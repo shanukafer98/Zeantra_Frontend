@@ -176,8 +176,8 @@ const SalesProfitLineChart = () => {
 
   useEffect(() => {
     Promise.all([
-      fetch('http://127.0.0.1:8000/Sales/Sales_Frontend'),
-      fetch('http://127.0.0.1:8000/Sales/Profit_Frontend')
+      fetch(`${process.env.ENDPOINT}/Sales/Sales_Frontend`),
+      fetch(`${process.env.ENDPOINT}/Sales/Profit_Frontend`)
     ])
       .then(([res1, res2]) => Promise.all([res1.json(), res2.json()]))
       .then(([salesData, profitData]) => {

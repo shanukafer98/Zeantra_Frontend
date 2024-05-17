@@ -72,7 +72,7 @@ class SalesBarChart extends React.Component {
 
     
     componentDidMount() {
-        fetch('http://127.0.0.1:8000/ValueCounts/FullTimePeriod_Frontend')
+        fetch(`${process.env.ENDPOINT}/ValueCounts/FullTimePeriod_Frontend`)
             .then(response => response.json())
             .then(data => {
                 this.setState({
@@ -116,7 +116,7 @@ class SalesBarChart extends React.Component {
     render() {
         return (
             <div className="flex flex-col items-center space-y-5 h-[700px]">
-                <ReactApexChart options={this.state.options} series={this.state.series} type="bar" height="550" width="600"/>
+                <ReactApexChart options={this.state.options} series={this.state.series} type="bar" height="550" width="550" />
                 <div className="flex space-x-2">
                     <DatePicker
                         selected={this.state.startDate}

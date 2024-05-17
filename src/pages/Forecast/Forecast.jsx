@@ -12,8 +12,8 @@ const Forecast_sales_and_profit = () => {
         <Breadcrumb pageName="Forecast" />
 
         <div className='grid grid-cols-1 md:grid-cols-1 gap-6 '>
-          <div className="bg-slate-300  dark:bg-slate-800 rounded-lg"><Forecast api="/Forecast/GetForecastSales" yaxix="sales" /></div>
-          <div className="bg-slate-300  dark:bg-slate-800 rounded-lg"><Forecast api="/Forecast/GetForecastProfit" yaxix="profit" /></div>
+          <div className="bg-slate-300  dark:bg-slate-800 rounded-lg"><Forecast api={`${process.env.ENDPOINT}/Forecast/GetForecastSales`} yaxix="sales" /></div>
+          <div className="bg-slate-300  dark:bg-slate-800 rounded-lg"><Forecast api={`${process.env.ENDPOINT}/Forecast/GetForecastProfit`} yaxix="profit" /></div>
         </div>
       </DefaultLayout>
     </>

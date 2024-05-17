@@ -14,7 +14,7 @@ function DataTable() {
     }, [startDate, endDate]);
 
     const fetchData = async () => {
-        const result = await axios.get(`/Database/items?start=${startDate.toISOString()}&end=${endDate.toISOString()}`);
+        const result = await axios.get(`${process.env.ENDPOINT}/Database/items?start=${startDate.toISOString()}&end=${endDate.toISOString()}`);
         if (result.data) {
             setData(result.data);
         } else {
@@ -25,7 +25,7 @@ function DataTable() {
     const addItem = async () => {
         const newItem = prompt('Enter new item');
         if (newItem) {
-            await axios.post('/Database/items', { item: newItem });
+            await axios.post(`${process.env.ENDPOINT}/Database/items`, { item: newItem });
             fetchData();
         }
     };
@@ -33,13 +33,13 @@ function DataTable() {
     const updateItem = async (itemId) => {
         const updatedItem = prompt('Enter updated item');
         if (updatedItem) {
-            await axios.put(`http://localhost:8000/Database/items/${itemId}`, { item: updatedItem });
+            await axios.put(`${process.env.ENDPOINT}/Database/items/${itemId}`, { item: updatedItem });
             fetchData();
         }
     };
 
     const deleteItem = async (itemId) => {
-        await axios.delete(`http://localhost:8000/Database/items/${itemId}`);
+        await axios.delete(`${process.env.ENDPOINT}/Database/items/${itemId}`);
         fetchData();
     };
 

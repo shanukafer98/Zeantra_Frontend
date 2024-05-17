@@ -12,7 +12,7 @@ const Dashboard = () => {
   const [totalProfit, setTotalProfit] = useState(0);
 
   useEffect(() => {
-  fetch('/Sales/Sales_Frontend') 
+  fetch(`${process.env.ENDPOINT}/Sales/Sales_Frontend`) 
     .then(response => response.json())
     .then(data => {
         let totalSales = Object.values(data.sales).reduce((a, b) => a + b, 0);
@@ -24,7 +24,7 @@ const Dashboard = () => {
   },[]);
 
   useEffect(() => {
-    fetch('/Sales/Profit_Frontend') 
+    fetch(`${process.env.ENDPOINT}/Sales/Profit_Frontend`) 
       .then(response => response.json())
       .then(data => {
           if (data.profit) {
@@ -134,8 +134,8 @@ const Dashboard = () => {
       
       <div className='grid grid-cols-1 md:grid-cols-1 gap-6 mt-9 '>
       <div className = "bg-slate-200  dark:bg-slate-800 rounded-lg"><SalesProfitLineChart/></div>
-      <div className = "bg-slate-200  dark:bg-slate-800 rounded-lg"><SalesLineChart api = "/Sales/Sales_Frontend" yaxix = "sales" xaxix = "date"/></div>
-      <div className = "bg-slate-200  dark:bg-slate-800 rounded-lg"><SalesLineChart api = "/Sales/Profit_Frontend" yaxix = "profit" xaxix = "date"/></div>
+      <div className = "bg-slate-200  dark:bg-slate-800 rounded-lg"><SalesLineChart api = {`${process.env.ENDPOINT}/Sales/Sales_Frontend`} yaxix = "sales" xaxix = "date"/></div>
+      <div className = "bg-slate-200  dark:bg-slate-800 rounded-lg"><SalesLineChart api = {`${process.env.ENDPOINT}/Sales/Profit_Frontend`} yaxix = "profit" xaxix = "date"/></div>
       
       </div>
     

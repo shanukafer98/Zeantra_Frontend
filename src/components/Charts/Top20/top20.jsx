@@ -247,7 +247,7 @@ function Top_20(props) {
 
     return (
         <div>
-            {data && <Chart options={chartOptions} series={chartOptions.series} type="bar" width='700' />}
+            {data && <Chart options={chartOptions} series={chartOptions.series} type="bar" />}
         </div>
     );
 }

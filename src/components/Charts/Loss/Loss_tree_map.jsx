@@ -73,7 +73,7 @@ function LossTreeMap(props) {
 
     return (
         <div>
-            <Chart options={options} series={series} type="treemap" height='380' width = "700"/>
+            <Chart options={options} series={series} type="treemap" height='380' width = "550"/>
         </div>
     );
 }

@@ -32,7 +32,7 @@ const Signup = () => {
             console.log(username, email, password);
             // Proceed with form submission
 
-            Axios.post('/UserRegistration', { username, email, password })
+            Axios.post(`${process.env.ENDPOINT}/UserRegistration`, { username, email, password })
                 .then(response => {
                     if (response.data.message === 'User registered successfully') {
                         setUsername('');
