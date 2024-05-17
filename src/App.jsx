@@ -25,7 +25,7 @@ function App() {
     <>
       <Routes>
         //if authenticated
-        {!isAuthenticated ? (
+        {isAuthenticated ? (
           <>
             <Route
               path="/dashboard"
