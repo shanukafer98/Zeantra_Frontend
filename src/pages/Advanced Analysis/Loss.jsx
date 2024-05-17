@@ -8,7 +8,7 @@ const Loss = () => {
   return (
     <>
       <DefaultLayout>
-        <Breadcrumb pageName="Top 20" />
+        <Breadcrumb pageName="Top 10 (Loss)" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
           <div className="bg-slate-300  dark:bg-slate-800 rounded-lg">

@@ -128,7 +128,6 @@
 // }
 
 // export default Top_20;
-
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Chart from 'react-apexcharts';
@@ -158,7 +157,8 @@ function Top_20(props) {
     const chartOptions = {
         chart: {
             type: 'bar',
-            height: 400,
+            height: 350,
+           
             mode: 'light',
         },
         plotOptions: {
@@ -176,15 +176,15 @@ function Top_20(props) {
             text: props.title,
             align: 'center',
             floating: true,
-            offsetY: -5,
+            offsetY: 0,
             style: {
                 color: '#636363',
-                fontSize: '20px',
+                fontSize: '18px',
             }
         },
         legend: {
             show: true,
-            fontSize: '12px',
+            fontSize: '8px',
 
             fontWeight: 700,
             labels: {
@@ -195,14 +195,23 @@ function Top_20(props) {
         responsive: [{
             breakpoint: 480,
             options: {
-                chart: {
-                    width: '80%'
-                },
-                legend: {
-                    position: 'bottom'
+              chart: {
+                width: '100%'
+              },
+              legend: {
+                position: 'bottom'
+              },
+              plotOptions: {
+                bar: {
+                  dataLabels: {
+                    style: {
+                      fontSize: '10px' 
+                    }
+                  }
                 }
+              }
             }
-        }],
+          }],
         tooltip: {
             theme: 'dark',
             fillSeriesColor: false,
@@ -246,12 +255,10 @@ function Top_20(props) {
     };
 
     return (
-        <div>
-            {data && <Chart options={chartOptions} series={chartOptions.series} type="bar" />}
+        <div className='w-full h-[500px]'>
+            <Chart options={chartOptions} series={chartOptions.series} type="bar" width="550" height = "450" />
         </div>
     );
 }
 
 export default Top_20;
-
-

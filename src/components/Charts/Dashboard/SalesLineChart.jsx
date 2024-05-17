@@ -107,8 +107,8 @@ const SalesLineChart = (props) => {
   }, [props.api]);
 
   return (
-    <div id="chart">
-      <ReactApexChart options={options} series={series} type="line" height= "600" />
+    <div className='overflow-x-auto'>
+      <ReactApexChart options={options} series={series} type="line" width="1100" />
     </div>
   );
 };

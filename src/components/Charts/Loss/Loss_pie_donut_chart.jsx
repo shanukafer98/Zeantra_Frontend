@@ -87,21 +87,30 @@ function LossPieOrDonutChart(props) {
              fontSize: '14px',
          },
         },
-        responsive: [{
-            breakpoint: 480,
-            options: {
-                chart: {
-                    width: '100%'
-                },
-                
+        responsive: [
+            {
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        width: '100%'
+                    },
+                    legend: {
+                        position: 'bottom'
+                    },
+                    title: {
+                        style: {
+                            fontSize: '18px'
+                        }
+                    }
+                }
             }
-        }],
+        ],
         colors: ['#0d001e', '#14183d', '#1b305b', '#22487a', '#2a6199'] // Add your colors here
     };
 
     return (
         <div>
-            {data && <Chart options={options} series={options.series} type= {props.chart_type} height='380'/>}
+            {data && <Chart options={options} series={options.series} type= {props.chart_type} height='450'/>}
         </div>
     );
 }

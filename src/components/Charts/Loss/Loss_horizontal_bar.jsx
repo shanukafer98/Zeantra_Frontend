@@ -92,17 +92,24 @@ function Loss_horizontal_bar(props) {
 
             }
         },
-        responsive: [{
-            breakpoint: 480,
-            options: {
-                chart: {
-                    width: '100%'
-                },
-                legend: {
-                    position: 'bottom'
+        responsive: [
+            {
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        width: '100%'
+                    },
+                    legend: {
+                        position: 'bottom'
+                    },
+                    title: {
+                        style: {
+                            fontSize: '16px'
+                        }
+                    }
                 }
             }
-        }],
+        ],
 
         tooltip: {
             theme: 'dark',
@@ -155,7 +162,7 @@ function Loss_horizontal_bar(props) {
 
     return (
         <div>
-            {data && <Chart options={options} series={options.series} type="bar" height='400'/>}
+            {data && <Chart options={options} series={options.series} type="bar" height='500'/>}
         </div>
     );
 }

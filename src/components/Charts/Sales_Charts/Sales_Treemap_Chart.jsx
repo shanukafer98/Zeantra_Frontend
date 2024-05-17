@@ -46,6 +46,24 @@ class SalesTreeMapChart extends React.Component {
                     '#3179b8', '#3891d6', '#3fa9f5', '#86c3fa', '#add8ff',
                     '#c4edff', '#dbefff'
                 ],
+                responsive: [
+                    {
+                        breakpoint: 480,
+                        options: {
+                            chart: {
+                                width: '100%'
+                            },
+                            legend: {
+                                position: 'bottom'
+                            },
+                            title: {
+                                style: {
+                                    fontSize: '18px'
+                                }
+                            }
+                        }
+                    }
+                ],
             }
         };
     }

@@ -56,15 +56,24 @@ class SalesPieChart extends React.Component {
                         speed: 350 // dynamic animation speed in milliseconds
                     }
                 },
-                responsive: [{
-                    breakpoint: 480,
-                    options: {
-                        chart: {
-                            width: '100%'
-                        },
-                        
+                responsive: [
+                    {
+                        breakpoint: 480,
+                        options: {
+                            chart: {
+                                width: '80%'
+                            },
+                            legend: {
+                                position: 'bottom'
+                            },
+                            title: {
+                                style: {
+                                    fontSize: '18px'
+                                }
+                            }
+                        }
                     }
-                }],
+                ],
 
                 legend: {
                     show: true, // set to false to hide the legend
@@ -152,7 +161,7 @@ class SalesPieChart extends React.Component {
     render() {
         return (
             <div className="flex flex-col items-center space-y-5 h-[700px]">
-                <ReactApexChart options={this.state.options} series={this.state.series} type={this.props.chart_type}  height= "600"  width="600"/>
+                <ReactApexChart options={this.state.options} series={this.state.series} type={this.props.chart_type}  width = "600" />
                 <div className="flex space-x-2">
                     <DatePicker
                         selected={this.state.startDate}

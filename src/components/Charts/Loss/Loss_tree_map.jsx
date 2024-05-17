@@ -54,15 +54,24 @@ function LossTreeMap(props) {
                 fontSize: '14px',
             },
            },
-        responsive: [{
-            breakpoint: 480,
-            options: {
-                chart: {
-                    width: '100%'
-                },
-                
+           responsive: [
+            {
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        width: '100%'
+                    },
+                    legend: {
+                        position: 'bottom'
+                    },
+                    title: {
+                        style: {
+                            fontSize: '18px'
+                        }
+                    }
+                }
             }
-        }],
+        ],
     };
 
     const series = [
@@ -73,7 +82,7 @@ function LossTreeMap(props) {
 
     return (
         <div>
-            <Chart options={options} series={series} type="treemap" height='380' width = "550"/>
+            <Chart options={options} series={series} type="treemap" height='500' width = "550"/>
         </div>
     );
 }

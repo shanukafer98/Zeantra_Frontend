@@ -64,6 +64,24 @@ class SalesBarChart extends React.Component {
                legend: {
                 show: false
                },
+               responsive: [
+                {
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            width: '100%'
+                        },
+                        legend: {
+                            position: 'bottom'
+                        },
+                        title: {
+                            style: {
+                                fontSize: '18px'
+                            }
+                        }
+                    }
+                }
+            ],
                
             }
         };
@@ -115,8 +133,8 @@ class SalesBarChart extends React.Component {
 
     render() {
         return (
-            <div className="flex flex-col items-center space-y-5 h-[700px]">
-                <ReactApexChart options={this.state.options} series={this.state.series} type="bar" height="550" width="550" />
+            <div className="flex flex-col items-center space-y-5 h-[700px] w-full">
+                <ReactApexChart options={this.state.options} series={this.state.series} type="bar" height="450"  width="550" />
                 <div className="flex space-x-2">
                     <DatePicker
                         selected={this.state.startDate}
