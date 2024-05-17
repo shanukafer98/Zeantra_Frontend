@@ -160,9 +160,9 @@ class SalesPieChart extends React.Component {
 
     render() {
         return (
-            <div className="flex flex-col items-center space-y-5 h-[600px]">
+            <div className="flex flex-col items-center space-y-5 h-[700px]">
                 <ReactApexChart options={this.state.options} series={this.state.series} type={this.props.chart_type}  width = "500" />
-                <div className="flex space-x-2">
+                <div className="flex space-x-2 sm:flex-row">
                     <DatePicker
                         selected={this.state.startDate}
                         onChange={date => this.setState({ startDate: date })}
