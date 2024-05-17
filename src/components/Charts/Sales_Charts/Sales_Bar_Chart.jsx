@@ -133,7 +133,7 @@ class SalesBarChart extends React.Component {
 
     render() {
         return (
-            <div className="flex flex-col items-center space-y-5 h-[700px] w-full">
+            <div className="flex flex-col items-center space-y-5 h-[600px] w-full">
                 <ReactApexChart options={this.state.options} series={this.state.series} type="bar" height="450"  width="550" />
                 <div className="flex space-x-2 flex-col sm:flex-row">
                     <DatePicker
