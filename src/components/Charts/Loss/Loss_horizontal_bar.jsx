@@ -88,7 +88,7 @@ function Loss_horizontal_bar(props) {
             
             style: {
                 color: '#636363',
-                fontSize: '24px',
+                fontSize: '20px',
 
             }
         },
@@ -104,7 +104,7 @@ function Loss_horizontal_bar(props) {
                     },
                     title: {
                         style: {
-                            fontSize: '16px'
+                            fontSize: '13px'
                         }
                     }
                 }

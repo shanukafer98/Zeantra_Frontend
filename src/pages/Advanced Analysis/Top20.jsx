@@ -41,7 +41,7 @@ const Top20 = () => {
               xaxix="country"
             />
           </div>
-          <div className="bg-slate-300  dark:bg-slate-800 rounded-lg">
+          {/* <div className="bg-slate-300  dark:bg-slate-800 rounded-lg">
             <Top_20
               api={`${process.env.ENDPOINT}/Top20s/regions with the most sales`}
               title="Top 10 Regions with most sales"
@@ -54,7 +54,7 @@ const Top20 = () => {
               title="Top 10 Regions with average sales"
               xaxix="country"
             />
-          </div>
+          </div> */}
         </div>
       </DefaultLayout>
     </>

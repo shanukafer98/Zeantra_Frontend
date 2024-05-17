@@ -59,7 +59,7 @@ function LossTreeMap(props) {
                 breakpoint: 480,
                 options: {
                     chart: {
-                        width: '100%'
+                        width: '85%'
                     },
                     legend: {
                         position: 'bottom'

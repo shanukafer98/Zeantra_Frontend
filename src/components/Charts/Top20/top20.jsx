@@ -157,7 +157,8 @@ function Top_20(props) {
     const chartOptions = {
         chart: {
             type: 'bar',
-            height: 350,
+            
+            width: 500,
            
             mode: 'light',
         },
@@ -196,7 +197,7 @@ function Top_20(props) {
             breakpoint: 480,
             options: {
               chart: {
-                width: '100%'
+                width: '80%'
               },
               legend: {
                 position: 'bottom'
@@ -255,8 +256,8 @@ function Top_20(props) {
     };
 
     return (
-        <div className='w-full h-[500px]'>
-            <Chart options={chartOptions} series={chartOptions.series} type="bar" width="550" height = "450" />
+        <div c>
+            <Chart options={chartOptions} series={chartOptions.series} type="bar"  height = "450" />
         </div>
     );
 }
