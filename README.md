@@ -1,5 +1,5 @@
 
-# Project Title
+# Financial Planning
 
 This is a Finanacial Planning system made by using React js,Fast api,Mongodb, This application gives visual analyze of a dataset.
 
