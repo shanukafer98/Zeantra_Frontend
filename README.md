@@ -1,17 +1,8 @@
-# Vite App
 
-This is a Vite-based web application that includes date pickers and other components. This project is set up to provide a responsive and efficient development environment.
+# Project Title
 
-## Table of Contents
+This is a Finanacial Planning system made by using React js,Fast api,Mongodb, This application gives visual analyze of a dataset.
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Features](#features)
-- [Project Structure](#project-structure)
-- [Scripts](#scripts)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Installation
 
@@ -19,8 +10,8 @@ First, make sure you have [Node.js](https://nodejs.org/) installed on your machi
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/your-repo-name.git
-    cd your-repo-name
+    git clone https://github.com/shanukafer98/Zeantra_Frontend.git
+    cd Zeantra_Frontend
     ```
 
 2. Install dependencies:
@@ -30,19 +21,24 @@ First, make sure you have [Node.js](https://nodejs.org/) installed on your machi
 
 ## Usage
 
-To start the development server, run:
-```bash
-npm run dev
+    To start the development server, run:
+    ```bash
+    npm run dev
+
 
 ## Features
 
-Responsive UI
-Dark Light theme Switcher
+    Responsive UI
+    Dark Light theme Switcher
+    Seamless intergration
 
 ## Technologies Used
 
-React JS
-Formik
-Tailwind CSS
-Apex chart
-Vite
+    React JS
+    Formik
+    Tailwind CSS
+    Apex chart
+    Vite    
+
+
+
